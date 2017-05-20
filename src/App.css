@@ -80,20 +80,15 @@
   float:left;
 }
 
-#signUpButton{
-  width: 60px;
-  margin-left: 25px;
-}
-
-.login input[type=button]:hover{
+.login button:hover{
   opacity: 0.6;
 }
 
-.login input[type=button]:active{
+.login button:active{
   opacity: 0.6;
 }
 
-.login input[type=text]:focus{
+.login input[type=email]:focus{
   outline: none;
   border: 1px solid rgba(255,255,255,0.9);
 }
@@ -103,7 +98,7 @@
   border: 1px solid rgba(255,255,255,0.9);
 }
 
-.login input[type=button]:focus{
+.login button:focus{
   outline: none;
 }
 
@@ -114,84 +109,3 @@
 ::-moz-input-placeholder{
   color: rgba(255,255,255,0.6);
 }
-
-
-/* not used
-#loginButton:hover{
-  opacity: 0.6;
-}
-
-#loginButton:active{
-  opacity: 0.6;
-}
-
-#loginButton:focus{
-  outline: none;
-}
-
-#loginButton{
-  width: 260px;
-  height: 35px;
-  background: #fff;
-  border: 1px solid #fff;
-  cursor: pointer;
-  border-radius: 2px;
-  color: #a18d6c;
-  font-family: 'Exo', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  padding: 6px;
-  margin-top: 10px;
-}
-
-
-
-
-
-h1{
-  color:white;
-  font-family: nosifer, Impact;
-  font-size: 3em;
-  text-align: center;
-}
-
-span{
-  color:red;
-  text-decoration:underline;
-  font-weight: bold;
-  text-transform:uppercase;
-}
-img{
-  display:block;
-  margin-left:auto;
-  margin-right:auto;
-}
-*/
-
-
-
-/*.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-*/
