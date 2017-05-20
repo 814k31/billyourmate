@@ -1,0 +1,93 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /home/blake/.nvm/versions/node/v5.0.0/bin/node /home/blake/.nvm/versions/node/v5.0.0/bin/firebase deploy --debug
+[debug] CLI Version:  3.9.0
+[debug] Platform:     linux
+[debug] Node Version: v5.0.0
+[debug] Time:         Sat May 20 2017 22:23:53 GMT+0800 (AWST)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/billyourmate  
+ Sat May 20 2017 22:23:53 GMT+0800 (AWST)
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/billyourmate/tokens  
+ Sat May 20 2017 22:23:55 GMT+0800 (AWST)
+[debug] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'billyourmate'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing build directory for upload...
+[debug] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/billyourmate/uploads/-KkaE_M-Ms366A60JCxr?fileCount=8&message=  
+ Sat May 20 2017 22:23:59 GMT+0800 (AWST)
+[debug] <<< HTTP RESPONSE 200
+[debug] [hosting] .tgz uploaded successfully, waiting for extraction
+[info] ✔  hosting: 8 files uploaded successfully
+[info] i  starting release process (may take several minutes)...
+[debug] >>> HTTP REQUEST POST https://deploy.firebase.com/v1/projects/billyourmate/releases { hosting: 
+   { public: 'build',
+     ignore: [ 'firebase.json', '**/.*', '**/node_modules/**' ],
+     version: '-KkaE_M-Ms366A60JCxr',
+     prefix: '-KkaE_M-Ms366A60JCxr/',
+     manifest: [] } } 
+ Sat May 20 2017 22:24:18 GMT+0800 (AWST)
+[debug] <<< HTTP RESPONSE 200
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/billyourmate/overview
+[info] Hosting URL: https://billyourmate.firebaseapp.com
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /home/blake/.nvm/versions/node/v5.0.0/bin/node /home/blake/.nvm/versions/node/v5.0.0/bin/firebase deploy --debug
+[debug] CLI Version:  3.9.0
+[debug] Platform:     linux
+[debug] Node Version: v5.0.0
+[debug] Time:         Sat May 20 2017 22:25:24 GMT+0800 (AWST)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/billyourmate  
+ Sat May 20 2017 22:25:24 GMT+0800 (AWST)
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/billyourmate/tokens  
+ Sat May 20 2017 22:25:25 GMT+0800 (AWST)
+[debug] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'billyourmate'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing build directory for upload...
+[debug] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/billyourmate/uploads/-KkaEvU8WdeKaA1S5Hvv?fileCount=8&message=  
+ Sat May 20 2017 22:25:29 GMT+0800 (AWST)
+[debug] <<< HTTP RESPONSE 200
+[debug] [hosting] .tgz uploaded successfully, waiting for extraction
+[info] ✔  hosting: 8 files uploaded successfully
+[info] i  starting release process (may take several minutes)...
+[debug] >>> HTTP REQUEST POST https://deploy.firebase.com/v1/projects/billyourmate/releases { hosting: 
+   { public: 'build',
+     ignore: [ 'firebase.json', '**/.*', '**/node_modules/**' ],
+     version: '-KkaEvU8WdeKaA1S5Hvv',
+     prefix: '-KkaEvU8WdeKaA1S5Hvv/',
+     manifest: [] } } 
+ Sat May 20 2017 22:25:53 GMT+0800 (AWST)
+[debug] <<< HTTP RESPONSE 200
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/billyourmate/overview
+[info] Hosting URL: https://billyourmate.firebaseapp.com
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /home/blake/.nvm/versions/node/v5.0.0/bin/node /home/blake/.nvm/versions/node/v5.0.0/bin/firebase deploy --debug
+[debug] CLI Version:  3.9.0
+[debug] Platform:     linux
+[debug] Node Version: v5.0.0
+[debug] Time:         Sat May 20 2017 22:28:16 GMT+0800 (AWST)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/billyourmate  
+ Sat May 20 2017 22:28:16 GMT+0800 (AWST)
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/billyourmate/tokens  
+ Sat May 20 2017 22:28:18 GMT+0800 (AWST)
+[debug] <<< HTTP RESPONSE 200
