@@ -50,7 +50,7 @@
 }
 
 .login button{
-  width: 175px;
+  width: 129px;
   height: 35px;
   background: #fff;
   border: 1px solid #fff;
@@ -62,6 +62,7 @@
   font-weight: 400;
   padding: 6px;
   margin-top: 10px;
+  margin-right:2px;
   float:left;
 }
 
