@@ -1,6 +1,6 @@
 import React from 'react'
 import * as firebase from 'firebase';
-import SignUp from './SignUp';
+import SignUp from '../signup/SignUp';
 
 class LogIn extends React.Component {
 	constructor() {
@@ -25,11 +25,9 @@ class LogIn extends React.Component {
 	}
 
 	toggleSignUp(event) {
-		console.log("toggle: " + this.state.signUp);
 		this.setState({
 			signUp: !this.state.signUp
 		});
-		console.log("after toggle: " + this.state.signUp + !this.state.signUp);
 	}
 
 	login(event) {
@@ -42,7 +40,6 @@ class LogIn extends React.Component {
 	}
 
 	render() {
-	
 		let form = null;
 
 		if(this.state.signUp === false) {
@@ -61,8 +58,7 @@ class LogIn extends React.Component {
 		}
 
 		return (
-		  <div className="App">
-	        <div className="background"></div>
+		  <div>
 	        <div className="header">
 	          <div>Bill your mate</div>
 	        </div>

@@ -11,6 +11,7 @@
   background-image: url(/images/background.jpg);
   background-size: cover;
   -webkit-filter: blur(0px);
+  z-index: -10;
 }
 
 .header{

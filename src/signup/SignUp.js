@@ -41,7 +41,16 @@ class SignUp extends React.Component {
 	signUp(event) {
 		if(this.state.password === this.state.cPassword) {
 			const promise = firebase.auth().createUserWithEmailAndPassword(this.state.username, this.state.password);
-	  		promise.catch(function (error) {
+	  		promise.then(function (user) {
+	  			user.updateProfile({
+  					displayName: "Test"
+				}).then(function () {
+					console.log("Name added");
+				}, function (error) {
+  					console.log("Error Code: " + error.code);
+					console.log("Error Message: " + error.message);
+				});
+	  		}, function (error) {
 	    		console.log("Cannot sign up");
 	    		console.log("Error Code: " + error.code);
 	    		console.log("Error Message: " + error.message);

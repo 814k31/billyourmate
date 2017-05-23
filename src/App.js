@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import * as firebase from 'firebase';
-import LogIn from './LogIn';
+import LogIn from './login/LogIn';
+import Dashboard from './dashboard/Dashboard';
 
-class App extends Component {
+class App extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -26,21 +27,22 @@ class App extends Component {
     });
   }
 
-  signOut(event) {
-    firebase.auth().signOut();
-  }
-
   render() {
+    let login = null;
     if(!this.state.firebaseUser) {
-      return <LogIn/>;
+      login = <LogIn/>;
     } else {
-      return (
-        <div>
-          <h1>Logged In!</h1>
-          <button onClick={this.signOut}>Sign Out</button>
-        </div>
-      );
+      login = <Dashboard/>;
     }
+
+    return (
+      <div className="App">
+        <div className="background"></div>
+        <div>
+          {login}
+        </div>
+      </div>
+    );
   }
 }
 
