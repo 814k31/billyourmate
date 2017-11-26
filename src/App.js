@@ -3,7 +3,7 @@ import './App.css';
 import * as firebase from 'firebase';
 import LogIn from './login/LogIn';
 import Dashboard from './dashboard/Dashboard';
-
+  
 class App extends React.Component {
   constructor() {
     super();

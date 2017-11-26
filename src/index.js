@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
 import App from './App';
 import './index.css';
 import * as firebase from 'firebase';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 //firebase initialize
 var config = {
@@ -16,6 +19,10 @@ var config = {
 firebase.initializeApp(config);
 
 ReactDOM.render(
-  <App />,
+//  	<Provider store={store}>
+	<MuiThemeProvider>
+  		<App />
+	</MuiThemeProvider>,
+//	</Provider>,
   document.getElementById('root')
 );
