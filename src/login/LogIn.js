@@ -45,6 +45,11 @@ class LogIn extends React.Component {
 			signUp: !this.state.signUp
 		});
 	}
+	toggleLogin(event) {
+		this.setState({
+			login: !this.state.login
+		});
+	}
 
 	login(event) {
 		const promise = firebase.auth().signInWithEmailAndPassword(this.state.username, this.state.password);
