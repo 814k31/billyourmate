@@ -11,7 +11,20 @@ class LogIn extends React.Component {
 			username: "",
 			password: "",
 			signUp: false,
+			login: false,
+			userCode: '',
+			santas: [],
+			chosenOne: null
 		}
+	}
+
+	componentDidMount () {
+		const rootRef = firebase.database().ref().child('react');
+		const secretSantaRef = rootRef.child('santas');
+
+		secretSantaRef.on('value', snap => {
+			this.setState({santas: snap.val()});
+		})
 	}
 
 	updateEmail(event) {
@@ -39,6 +52,20 @@ class LogIn extends React.Component {
 			console.log("Error Code: " + error.code);
 			console.log("Error Message: " + error.message);
 		});
+	}
+	checkSecretSantaCode(event) {
+		var chosen = this.state.santas.find(person => {
+			return person.code === this.state.userCode;
+		});
+		if (chosen) {
+			this.setState({
+				chosenOne: chosen.match
+			});
+		} else {
+			this.setState({
+				chosenOne: 'incorrect code'
+			})
+		}
 	}
 ////<input type="email" value={this.state.username} onChange={this.updateEmail.bind(this)} placeholder="email"/>
 //<br/>
