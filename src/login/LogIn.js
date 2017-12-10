@@ -3,6 +3,7 @@ import * as firebase from 'firebase';
 import SignUp from '../signup/SignUp';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
+import './Login.css';
 
 class LogIn extends React.Component {
 	constructor() {
