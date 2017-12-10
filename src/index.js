@@ -9,20 +9,20 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 //firebase initialize
 var config = {
-    apiKey: "AIzaSyDjW5THPlw8berjWWul73PfRsifR_HUg5Y",
-    authDomain: "billyourmate.firebaseapp.com",
-    databaseURL: "https://billyourmate.firebaseio.com",
-    storageBucket: "billyourmate.appspot.com",
-    messagingSenderId: "670004349972"
+	apiKey: "AIzaSyDjW5THPlw8berjWWul73PfRsifR_HUg5Y",
+	authDomain: "billyourmate.firebaseapp.com",
+	databaseURL: "https://billyourmate.firebaseio.com",
+	storageBucket: "billyourmate.appspot.com",
+	messagingSenderId: "670004349972"
 };
 
 firebase.initializeApp(config);
 
 ReactDOM.render(
-//  	<Provider store={store}>
+	//  	<Provider store={store}>
 	<MuiThemeProvider>
-  		<App />
+		<App />
 	</MuiThemeProvider>,
-//	</Provider>,
-  document.getElementById('root')
+	//	</Provider>,
+	document.getElementById('root')
 );

@@ -9,20 +9,20 @@ class LogIn extends React.Component {
 		super();
 		this.state = {
 			username: "",
-      		password: "",
-      		signUp: false,
+			password: "",
+			signUp: false,
 		}
 	}
 
 	updateEmail(event) {
-    	this.setState({
-      		username: event.target.value
-    	});
-  	}
+		this.setState({
+			username: event.target.value
+		});
+	}
 
 	updatePassword(event) {
 		this.setState({
-	  		password: event.target.value
+			password: event.target.value
 		});
 	}
 
@@ -33,12 +33,12 @@ class LogIn extends React.Component {
 	}
 
 	login(event) {
-    	const promise = firebase.auth().signInWithEmailAndPassword(this.state.username, this.state.password);
-    	promise.catch(function (error) {
-    		console.log("Cannot log in");
-    		console.log("Error Code: " + error.code);
-    		console.log("Error Message: " + error.message);
-    	});
+		const promise = firebase.auth().signInWithEmailAndPassword(this.state.username, this.state.password);
+		promise.catch(function (error) {
+			console.log("Cannot log in");
+			console.log("Error Code: " + error.code);
+			console.log("Error Message: " + error.message);
+		});
 	}
 ////<input type="email" value={this.state.username} onChange={this.updateEmail.bind(this)} placeholder="email"/>
 //<br/>
@@ -61,18 +61,18 @@ class LogIn extends React.Component {
 		if(!this.state.signUp && this.state.login) {
 			form = (
 				<div className="login">
-		          <TextField hintText="Email Field"
+					<TextField hintText="Email Field"
 						floatingLabelText="Email" value={this.state.username} type="email" onChange={e => this.setState({ username: e.target.value })}/>
-	 				<br />
-				  <TextField hintText="Password Field"
+					<br />
+					<TextField hintText="Password Field"
 						floatingLabelText="Password" value={this.state.password} onChange={e => this.setState({ password: e.target.value })} type="password"/>
 					<br />
 					<div style={{width: '256px', display: 'inline-flex', justifyContent: 'space-between'}}>
-		        		<RaisedButton label="Log in" onClick={this.login.bind(this)} />
-		        		<RaisedButton label="You Dickhead" onClick={this.toggleLogin.bind(this)} />
-		        		{/*<RaisedButton label="Sign up" onClick={this.toggleSignUp.bind(this)} />*/}
-		        	</div>
-		        </div>
+						<RaisedButton label="Log in" onClick={this.login.bind(this)} />
+						<RaisedButton label="You Dickhead" onClick={this.toggleLogin.bind(this)} />
+						{/*<RaisedButton label="Sign up" onClick={this.toggleSignUp.bind(this)} />*/}
+					</div>
+				</div>
 			);
 		} else if (this.state.signUp) {
 			form = <SignUp toggleSignUp={this.toggleSignUp.bind(this)}/>
@@ -102,7 +102,7 @@ class LogIn extends React.Component {
 				{this.state.signUp}
 				{form}
 			</div>
-    	);
+		);
 	}
 }
 
