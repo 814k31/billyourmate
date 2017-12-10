@@ -51,8 +51,14 @@ class LogIn extends React.Component {
 
 	render() {
 		let form = null;
+		let chosenOne = null;
+		if (this.state.chosenOne) {
+			chosenOne = <label className="santa">{this.state.chosenOne}</label>;
+			if (!this.state.chosenOne.length)
+				chosenOne = <label className="santa bad">Tell Blake to regenerate matches</label>
+		}
 
-		if(this.state.signUp === false) {
+		if(!this.state.signUp && this.state.login) {
 			form = (
 				<div className="login">
 		          <TextField hintText="Email Field"
@@ -63,22 +69,39 @@ class LogIn extends React.Component {
 					<br />
 					<div style={{width: '256px', display: 'inline-flex', justifyContent: 'space-between'}}>
 		        		<RaisedButton label="Log in" onClick={this.login.bind(this)} />
-		        		<RaisedButton label="Sign up" onClick={this.toggleSignUp.bind(this)} />
+		        		<RaisedButton label="You Dickhead" onClick={this.toggleLogin.bind(this)} />
+		        		{/*<RaisedButton label="Sign up" onClick={this.toggleSignUp.bind(this)} />*/}
 		        	</div>
 		        </div>
 			);
-		} else {
+		} else if (this.state.signUp) {
 			form = <SignUp toggleSignUp={this.toggleSignUp.bind(this)}/>
+		} else {
+			form = (
+				<div className="login">
+					<div>
+						<div>
+							<input className="secretCode" placeholder="Enter Secret Code" value={this.state.userCode} type="password" onChange={e => this.setState({ userCode: e.target.value })} style={{width: 'calc(100% - 10px)'}}/>
+							<RaisedButton label="Check Code" style={{float: 'left'}} onClick={this.checkSecretSantaCode.bind(this)}/>
+							<RaisedButton label="Blake Only Button" onClick={this.toggleLogin.bind(this)} style={{float: 'right'}} />
+						</div>
+					</div>
+					{chosenOne}
+				</div>
+			)
 		}
 
 		return (
-		  <div>
-	        <div className="header">
-	          <div>Bill your mate</div>
-	        </div>
-	        {this.state.signUp}
-	        {form}
-    	  </div>      
+			<div className="flex">
+				<div className="header">
+					<div>
+						<div style={{textDecoration: 'line-through'}}>Bill your mate</div>
+						<div>Secret Santa</div>
+					</div>
+				</div>
+				{this.state.signUp}
+				{form}
+			</div>
     	);
 	}
 }
